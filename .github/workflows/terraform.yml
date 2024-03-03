@@ -1,8 +1,10 @@
-name: actions
+name: Simple Workflow
+
 on: workflow_dispatch
 jobs:
-  Testing:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-      name: Testing workflow
-      run: echo "Workflow Testing"
+    - name: Echo Message
+      run: echo "Hello, GitHub Actions!"
