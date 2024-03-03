@@ -1,4 +1,4 @@
-name : "profile_IAC"
+name : "profile"
 on:
   push:
     branches:
