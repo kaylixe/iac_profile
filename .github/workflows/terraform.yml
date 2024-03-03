@@ -3,22 +3,22 @@ on:
   push:
     branches:
       - main
-      - Name: name
-    path:
+      - stage
+    paths:
       - terraform/**
-    pull_request:
-      branches: 
-        - main 
-      paths:
-        - terraform/**
+  pull_request:
+    branches: 
+      - main 
+    paths:
+      - terraform/**
 env:
 # Credentials for deployment to AWS
-AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-# S3 bucket for the terraform state
-BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE}}
-AWS_REGION: us-east-2
-EKS_CLUSTER: eks-profile
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  # S3 bucket for the terraform state
+  BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE}}
+  AWS_REGION: us-east-2
+  EKS_CLUSTER: eks-profile
 
 jobs:
   terraform:
