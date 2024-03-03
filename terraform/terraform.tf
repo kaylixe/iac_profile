@@ -25,7 +25,7 @@ terraform {
       version = "~> 2.23.0"
     }
   }
-
+  # setup backend
   backend "s3" {
     bucket = "vprofile86"
     key    = "terraform.tfstate"
