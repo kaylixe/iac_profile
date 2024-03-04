@@ -25,14 +25,16 @@ terraform {
       version = "~> 2.23.0"
     }
   }
-
+  # setup backend
   backend "s3" {
-    bucket = "gitopsterrastate"
+    bucket = "vprofile86"
     key    = "terraform.tfstate"
     region = "us-east-2"
   }
 
-  required_version = "~> 1.6.3"
+  required_version = ">= 0.12.29"
+  #required_version = "~> 1.6.3"
+
 }
 ##
 ##
